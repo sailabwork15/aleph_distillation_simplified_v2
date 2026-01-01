@@ -6,9 +6,13 @@ ROOT = Path(__file__).resolve().parents[1]
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
-\
+# Set matplotlib to use non-interactive backend before any plotting
+import matplotlib
+matplotlib.use('Agg')
+
 from distill.column import ColumnSpec
 from scenarios._common import run_case
+from scenarios.plot_profiles import plot_composition_profile
 
 
 def main():
@@ -26,6 +30,10 @@ def main():
     df, summary, paths = run_case("outputs", "base", spec)
     print("Base summary:", summary)
     print("Saved:", paths)
+    
+    # Plot composition profile
+    plot_composition_profile(df, title="Base Case - Benzene-Toluene Distillation", 
+                           output_path="outputs/base_profile.png")
 
 
 if __name__ == "__main__":
