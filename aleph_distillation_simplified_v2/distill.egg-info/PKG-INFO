@@ -1,0 +1,9 @@
+Metadata-Version: 2.4
+Name: distill
+Version: 0.1
+Requires-Dist: pyomo
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: matplotlib
+Requires-Dist: openpyxl
+Dynamic: requires-dist
