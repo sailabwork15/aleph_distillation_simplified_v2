@@ -1,4 +1,4 @@
-# Aleph Distillation Column Model (Simplified)
+# Aleph Distillation Column Model 
 
 A small **first‑principles** benzene–toluene column model with:
 - Ideal VLE (Antoine + Raoult)
